@@ -11,16 +11,17 @@ class RatesBll:
         return self.__rate_dao.get_rates()
 
     def convert_amount(self, source: str, target: str, amount: float):
-        data = self.__rate_dao.get_rates()
-        base, rates = data.get("base"), data.get("rates", {})
-        source, target = source.upper(), target.upper()
+    source = source.upper()
+    target = target.upper()
+    get_rate = self.__rate_dao.get_currency_rate
 
-        if base not in rates:
-            key, val = next(iter(rates.items()))
-            rates[base] = rates[key] / val
+    try:
+        source_rate = 1.0 if source == "PHP" else get_rate(source)
+        target_rate = 1.0 if target == "PHP" else get_rate(target)
 
-        try:
-            return float(amount) * rates[source] / rates[target]
-        except Exception:
-            print("Error")
+        php_amount = float(amount) * source_rate
+        return php_amount / target_rate
+
+    except Exception as ex:
+        print(f"Value not in the list. {str(ex)}")
 
