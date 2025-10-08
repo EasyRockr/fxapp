@@ -11,16 +11,16 @@ class RatesBll:
         return self.__rate_dao.get_rates()
 
     def convert_amount(self, source: str, target: str, amount: float):
-        data = self.__rate_dao.get_rates()
-        base, rates = data.get("base"), data.get("rates", {})
-        source, target = source.upper(), target.upper()
-
-        if base not in rates:
-            key, val = next(iter(rates.items()))
-            rates[base] = rates[key] / val
+        source = source.upper()
+        target = target.upper()
+        get_rate = self.__rate_dao.get_currency_rate
 
         try:
-            return float(amount) * rates[source] / rates[target]
-        except Exception:
-            print("[Error] Conversion failed. [Info] Source or target currency not found in rate list.")
+            source_rate = get_rate(source)
+            target_rate = get_rate(target)
 
+            base_amount = float(amount) * source_rate
+            return round(base_amount / target_rate, 2)
+
+        except KeyError:
+            print(f"[Error] Invalid currency. Please check your rates list.")
