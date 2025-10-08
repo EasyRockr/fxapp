@@ -10,19 +10,30 @@ class ConvertMenu:
         input_ctrl = InputController(self.data_source)
         convert_ctrl = ConvertMoney(self.data_source)
 
-        source = input_ctrl.get_currency("Source Ccy")
-        if not source:
-            return None
+        source = target = amount = None
 
-        target = input_ctrl.get_currency("Target Ccy")
-        if not target:
-            return None
+        while True:
+            try:
+                if source is None:
+                    source = input_ctrl.get_currency("Source Ccy")
+                if target is None:
+                    target = input_ctrl.get_currency("Target Ccy")
+                if amount is None:
+                    amount = input_ctrl.get_amount(f"Amount in {source}")
+                break
+            except ValueError as e:
+                print(e)
+                if "currency" in str(e).lower() and source is None:
+                    continue
+                elif "currency" in str(e).lower() and target is None:
+                    continue
+                elif "amount" in str(e).lower():
+                    amount = None
+                else:
+                    source = target = amount = None
 
-        amount = input_ctrl.get_amount(f"Amount in {source}")
-        if amount is None:
-            return None
-
-        result = convert_ctrl.convert(source, target, amount)
-        if result is not None:
-            formatted_result = f"{result:,.2f}"
-            print(f"Converted Amt: {formatted_result} {target}")
+        try:
+            result = convert_ctrl.convert(source, target, amount)
+            print(f"Converted amount: {result:,.2f} {target}")
+        except Exception as e:
+            print(f"[Error] Conversion failed. [Info] {str(e)}")

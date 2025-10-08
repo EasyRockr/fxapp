@@ -13,12 +13,19 @@ class Router:
             2: ConvertMenu(self.data_source).input_menu
         }
 
+        valid_choices = list(pages.keys())
+
         while True:
             try:
                 choice = int(main_menu.display())
-                if choice in pages.keys():
-                    pages[choice]()
+                if choice in valid_choices:
+                    try:
+                        pages[choice]()
+                    except ValueError as e:
+                        print(e)
+                    except Exception as e:
+                        print(f"[Error] {e}")
                 else:
-                    print(f"[Error] Invalid option. [Info] Please choose from {list(pages.keys())}.")
+                    print(f"[Error] Invalid option. [Info] Please choose from {valid_choices}.")
             except ValueError:
-                print("[Error] Invalid input. [Info] Please enter a number (e.g., 1 or 2).")
+                print(f"[Error] Invalid input. [Info] Please enter a number from {valid_choices}.")

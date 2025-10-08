@@ -22,5 +22,14 @@ class RatesBll:
             base_amount = float(amount) * source_rate
             return round(base_amount / target_rate, 2)
 
-        except KeyError:
-            print(f"[Error] Invalid currency. Please check your rates list.")
+        except KeyError as e:
+            raise ValueError(
+                f"[Error] Currency '{e.args[0]}' not found. "
+                f"[Info] Please verify your currency list."
+            )
+
+        except ZeroDivisionError:
+            raise ValueError("[Error] Target currency rate is zero. [Warn] Conversion aborted.")
+
+        except Exception as e:
+            raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
