@@ -1,10 +1,10 @@
 from dal.dal_factory import RatesFactory
 
-class InputDal:
+class InputBll:
     def __init__(self, data_source: str):
         self.rate_dao = RatesFactory().create_instance(data_source)
         data = self.rate_dao.get_rates()
-        self.valid_currencies = [data["base"]] + list(data["rates"].keys())
+        self.valid_currencies = list(data["rates"].keys())
 
     def get_menu_choice(self, valid_choices: list[int]):
         while True:

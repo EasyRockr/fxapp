@@ -24,4 +24,5 @@ class ConvertMenu:
 
         result = convert_ctrl.convert(source, target, amount)
         if result is not None:
-            print(f"Converted Amt: {result:.2f} {target}")
+            formatted_result = f"{result:,.2f}"
+            print(f"Converted Amt: {formatted_result} {target}")
