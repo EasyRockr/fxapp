@@ -32,16 +32,3 @@ class InputBll:
         if num < 0:
             raise ValueError("[Error] Amount cannot be negative.")
         return round(num, 2)
-
-
-
-# dal = walang business layer, purely data access (purely data persistence)
-# bll = all business logic
-# data validator = not tighly couple to input validator
-# input -> data validator
-# the same validator can be placed in the bll
-# you can validate anything = regex (date, money, string), easiest way (no need for allow validators)
-# 2 inputs: pattern, value -> validate
-# iso date validation pattern
-# + integer pattern, small case string pattern
-# can create/specify the regex

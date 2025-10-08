@@ -21,7 +21,7 @@ class RatesBll:
 
             base_amount = float(amount) * source_rate
             return round(base_amount / target_rate, 2)
-
+        
         except KeyError as e:
             raise ValueError(
                 f"[Error] Currency '{e.args[0]}' not found. "
