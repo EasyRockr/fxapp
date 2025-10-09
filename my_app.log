@@ -1,0 +1,1972 @@
+2025-10-09 14:48:43,420 - [INFO] - (logger.py:27 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 14:48:43,421 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 14:48:43,422 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_rates_data]
+2025-10-09 14:48:43,422 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x74a991e0e2a0>,) -- Kwargs: {}
+2025-10-09 14:48:43,423 - [INFO] - (logger.py:34 - wrapper) - End: [get_rates_data]
+2025-10-09 14:48:43,423 - [INFO] - (logger.py:34 - wrapper) - End: [retrieve_rates]
+2025-10-09 14:54:42,744 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 14:54:42,745 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 14:54:42,746 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 14:54:42,746 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a59dcbcf860>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 14:54:42,747 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 14:54:42,747 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 14:54:50,400 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 14:54:50,400 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 's', 'target': 'php', 'amount': 2.0}
+2025-10-09 14:54:50,400 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 14:54:50,400 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a59dcbcf860>, 's', 'php', 2.0) -- Kwargs: {}
+2025-10-09 14:54:50,400 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: S
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 21, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: S
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: S
+2025-10-09 14:54:50,404 - [ERROR] - (convert_api.py:19 - convert_currency) - [Error] Conversion failed. [Info] [Error] Invalid currency: S
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 21, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: S
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 16, in convert_currency
+    response.data = rates_bll.convert_amount(source, target, amount)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: S
+2025-10-09 14:54:50,405 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 14:55:34,928 - [INFO] - (logger.py:27 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 14:55:34,928 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 14:55:34,929 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_rates_data]
+2025-10-09 14:55:34,929 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a59dc6128d0>,) -- Kwargs: {}
+2025-10-09 14:55:34,929 - [INFO] - (logger.py:34 - wrapper) - End: [get_rates_data]
+2025-10-09 14:55:34,929 - [INFO] - (logger.py:34 - wrapper) - End: [retrieve_rates]
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a59dcbcf860>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 14:55:51,582 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 14:59:53,727 - [INFO] - (logger.py:27 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 14:59:53,729 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 14:59:53,730 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_rates_data]
+2025-10-09 14:59:53,732 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x789306a0e810>,) -- Kwargs: {}
+2025-10-09 14:59:53,732 - [INFO] - (logger.py:34 - wrapper) - End: [get_rates_data]
+2025-10-09 14:59:53,733 - [INFO] - (logger.py:34 - wrapper) - End: [retrieve_rates]
+2025-10-09 15:02:04,163 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:02:04,164 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x719e7f20d190>, 'json') -- Kwargs: {}
+2025-10-09 15:02:04,164 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:02:04,171 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:02:04,171 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x719e7f20ecf0>, 'json') -- Kwargs: {}
+2025-10-09 15:02:04,171 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:04:24,671 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:04:24,671 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7163c377cd70>, 'json') -- Kwargs: {}
+2025-10-09 15:04:24,671 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:04:24,677 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:04:24,677 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7163c2c1a840>, 'json') -- Kwargs: {}
+2025-10-09 15:04:24,677 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:06:03,411 - [INFO] - (logger.py:27 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 15:06:03,412 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 15:06:03,415 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_rates_data]
+2025-10-09 15:06:03,415 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7163c2c1a510>,) -- Kwargs: {}
+2025-10-09 15:06:03,416 - [INFO] - (logger.py:34 - wrapper) - End: [get_rates_data]
+2025-10-09 15:06:03,417 - [INFO] - (logger.py:34 - wrapper) - End: [retrieve_rates]
+2025-10-09 15:07:48,641 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:07:48,641 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76858c8a3cb0>, 'json') -- Kwargs: {}
+2025-10-09 15:07:48,641 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:07:48,647 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:07:48,647 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76858c71aa80>, 'json') -- Kwargs: {}
+2025-10-09 15:07:48,648 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:08:02,028 - [INFO] - (logger.py:27 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 15:08:02,029 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 15:08:02,030 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_rates_data]
+2025-10-09 15:08:02,031 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x76858c71a900>,) -- Kwargs: {}
+2025-10-09 15:08:02,031 - [INFO] - (logger.py:34 - wrapper) - End: [get_rates_data]
+2025-10-09 15:08:02,031 - [INFO] - (logger.py:34 - wrapper) - End: [retrieve_rates]
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x76858d2efef0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:08:13,697 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:08:18,072 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:08:18,072 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 15:08:18,072 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:08:18,072 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x76858d2efef0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 15:08:18,072 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:08:18,076 - [ERROR] - (convert_api.py:18 - convert_currency) - [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    response.data = rates_bll.convert_amount(source, target, amount)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:08:18,079 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:11:44,854 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:11:44,854 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7fa5dd7561b0>, 'json') -- Kwargs: {}
+2025-10-09 15:11:44,854 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:11:44,857 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:11:44,857 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7fa5dd5be6f0>, 'json') -- Kwargs: {}
+2025-10-09 15:11:44,857 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:12:13,870 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:12:13,871 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:12:13,871 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:12:13,871 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7fa5de247ef0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:12:13,871 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:12:13,871 - [ERROR] - (convert_api.py:25 - convert_currency) - 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=116.02, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 17, in convert_currency
+    response = ServiceResponse(
+               ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=116.02, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+2025-10-09 15:12:13,873 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_currency: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 26, in convert_currency
+    response = ServiceResponse(
+               ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+2025-10-09 15:12:18,366 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:12:18,366 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:12:18,366 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:12:18,366 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7fa5de247ef0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:12:18,366 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:12:18,366 - [ERROR] - (convert_api.py:25 - convert_currency) - 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=116.02, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 17, in convert_currency
+    response = ServiceResponse(
+               ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=116.02, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+2025-10-09 15:12:18,367 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_currency: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 26, in convert_currency
+    response = ServiceResponse(
+               ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/venv/lib/python3.12/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ServiceResponse
+data
+  Input should be a valid dictionary or instance of BaseModel [type=model_type, input_value=[], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.12/v/model_type
+2025-10-09 15:13:54,968 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:13:54,968 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71c3852c9d60>, 'json') -- Kwargs: {}
+2025-10-09 15:13:54,968 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:13:54,972 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:13:54,972 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71c3851ba9c0>, 'json') -- Kwargs: {}
+2025-10-09 15:13:54,972 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:13:59,988 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:13:59,988 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x725d59aa3cb0>, 'json') -- Kwargs: {}
+2025-10-09 15:13:59,989 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:13:59,993 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:13:59,993 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x725d5991a9c0>, 'json') -- Kwargs: {}
+2025-10-09 15:13:59,994 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:14:14,046 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:17,947 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:17,947 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usds', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:14:17,947 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:17,947 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usds', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:14:17,947 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+2025-10-09 15:14:17,954 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+2025-10-09 15:14:17,958 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:25,308 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:25,309 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usds', 'target': 'phps', 'amount': 2.0}
+2025-10-09 15:14:25,309 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:25,309 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usds', 'phps', 2.0) -- Kwargs: {}
+2025-10-09 15:14:25,309 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+2025-10-09 15:14:25,310 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 30, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+2025-10-09 15:14:25,318 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:30,775 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:30,777 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'phps', 'amount': 2.0}
+2025-10-09 15:14:30,777 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:30,777 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usd', 'phps', 2.0) -- Kwargs: {}
+2025-10-09 15:14:30,777 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: PHPS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: PHPS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: PHPS
+2025-10-09 15:14:30,786 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Conversion failed. [Info] [Error] Invalid currency: PHPS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: PHPS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 41, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: PHPS
+2025-10-09 15:14:30,791 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:38,826 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:38,826 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 15:14:38,826 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:38,826 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 15:14:38,826 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:38,827 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:38,827 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:43,876 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:43,877 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -0.0}
+2025-10-09 15:14:43,877 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:43,877 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usd', 'php', -0.0) -- Kwargs: {}
+2025-10-09 15:14:43,877 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:43,877 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:43,878 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:14:48,638 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:14:48,638 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 0.0}
+2025-10-09 15:14:48,638 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:14:48,638 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d5a4bfef0>, 'usd', 'php', 0.0) -- Kwargs: {}
+2025-10-09 15:14:48,638 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:48,639 - [ERROR] - (convert_api.py:23 - convert_currency) - [Error] Amount must be greater than zero.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    result = rates_bll.convert_amount(source, target, amount)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must be greater than zero.")
+ValueError: [Error] Amount must be greater than zero.
+2025-10-09 15:14:48,643 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:17:01,756 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:17:01,757 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x705234de2720>, 'json') -- Kwargs: {}
+2025-10-09 15:17:01,757 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:17:01,758 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:17:01,758 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7052337be540>, 'json') -- Kwargs: {}
+2025-10-09 15:17:01,758 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:17:37,594 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:17:37,594 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76bd3f31a540>, 'json') -- Kwargs: {}
+2025-10-09 15:17:37,594 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:17:37,598 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:17:37,598 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76bd3f31abd0>, 'json') -- Kwargs: {}
+2025-10-09 15:17:37,598 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:18:28,076 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:18:28,076 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x72c8c161a210>, 'json') -- Kwargs: {}
+2025-10-09 15:18:28,077 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:18:28,081 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:18:28,082 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x72c8c161a930>, 'json') -- Kwargs: {}
+2025-10-09 15:18:28,082 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:19:23,594 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:19:23,595 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x72cf734b3530>, 'json') -- Kwargs: {}
+2025-10-09 15:19:23,595 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:19:23,600 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:19:23,600 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x72cf722be420>, 'json') -- Kwargs: {}
+2025-10-09 15:19:23,600 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:19:43,307 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:19:43,308 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7a15fa8c0110>, 'json') -- Kwargs: {}
+2025-10-09 15:19:43,308 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:19:43,313 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:19:43,313 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7a15f9bb5910>, 'json') -- Kwargs: {}
+2025-10-09 15:19:43,314 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:27:06,264 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:27:06,264 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7c697a627b60>, 'json') -- Kwargs: {}
+2025-10-09 15:27:06,264 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:27:06,270 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:27:06,270 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7c697991a8a0>, 'json') -- Kwargs: {}
+2025-10-09 15:27:06,271 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:27:27,449 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:27:27,450 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:27:27,450 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:27:27,450 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:27:27,450 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:27:27,450 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:27:30,976 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:27:30,977 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usds', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:27:30,977 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:27:30,977 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usds', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:27:30,977 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Invalid currency. [Info] Please verify your currency list.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 28, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    raise ValueError(f"[Error] Invalid currency. [Info] Please verify your currency list.")
+ValueError: [Error] Invalid currency. [Info] Please verify your currency list.
+2025-10-09 15:27:30,980 - [ERROR] - (convert_api.py:17 - convert_currency) - [Error] Invalid currency. [Info] Please verify your currency list.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 28, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    response.data = rates_bll.convert_amount(source, target, amount)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    raise ValueError(f"[Error] Invalid currency. [Info] Please verify your currency list.")
+ValueError: [Error] Invalid currency. [Info] Please verify your currency list.
+2025-10-09 15:27:30,983 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:27:40,292 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:27:40,293 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'phps', 'amount': 2.0}
+2025-10-09 15:27:40,293 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:27:40,293 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'phps', 2.0) -- Kwargs: {}
+2025-10-09 15:27:40,293 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Invalid currency. [Info] Please verify your currency list.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 29, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: PHPS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    raise ValueError(f"[Error] Invalid currency. [Info] Please verify your currency list.")
+ValueError: [Error] Invalid currency. [Info] Please verify your currency list.
+2025-10-09 15:27:40,294 - [ERROR] - (convert_api.py:17 - convert_currency) - [Error] Invalid currency. [Info] Please verify your currency list.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 29, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 15, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: PHPS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    response.data = rates_bll.convert_amount(source, target, amount)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 31, in convert_amount
+    raise ValueError(f"[Error] Invalid currency. [Info] Please verify your currency list.")
+ValueError: [Error] Invalid currency. [Info] Please verify your currency list.
+2025-10-09 15:27:40,295 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:27:47,676 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:27:47,677 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -1.0}
+2025-10-09 15:27:47,677 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:27:47,677 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'php', -1.0) -- Kwargs: {}
+2025-10-09 15:27:47,677 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 15:27:47,678 - [ERROR] - (convert_api.py:17 - convert_currency) - [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/controller/convert_api.py", line 15, in convert_currency
+    response.data = rates_bll.convert_amount(source, target, amount)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 25, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 15:27:47,681 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 0.0}
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'php', 0.0) -- Kwargs: {}
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:28:05,643 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:28:22,881 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:28:22,881 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 10.0}
+2025-10-09 15:28:22,882 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:28:22,882 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'php', 10.0) -- Kwargs: {}
+2025-10-09 15:28:22,883 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:28:22,884 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:28:29,050 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:28:29,050 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 11.2}
+2025-10-09 15:28:29,051 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:28:29,051 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7c6979bf7e90>, 'usd', 'php', 11.2) -- Kwargs: {}
+2025-10-09 15:28:29,051 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:28:29,051 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:32:25,639 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:32:25,639 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x738e9319d670>, 'json') -- Kwargs: {}
+2025-10-09 15:32:25,639 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:32:25,645 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:32:25,645 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x738e930168a0>, 'json') -- Kwargs: {}
+2025-10-09 15:32:25,646 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:37:24,353 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:37:24,354 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:37:24,354 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:37:24,354 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x738e9409e5a0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:37:24,354 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:37:24,354 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:39:01,803 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:39:01,803 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7618aba225a0>, 'json') -- Kwargs: {}
+2025-10-09 15:39:01,803 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:39:01,809 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:39:01,809 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7618ab912420>, 'json') -- Kwargs: {}
+2025-10-09 15:39:01,809 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:39:20,369 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:39:20,370 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'jpy', 'amount': 100.0}
+2025-10-09 15:39:20,370 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:39:20,370 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7618ac4edd90>, 'usd', 'jpy', 100.0) -- Kwargs: {}
+2025-10-09 15:39:20,371 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:39:20,371 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:39:35,588 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:39:35,588 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:39:35,588 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:39:35,588 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7618ac4edd90>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:39:35,589 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:39:35,589 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:41:46,506 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:41:46,506 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -1.0}
+2025-10-09 15:41:46,507 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:41:46,509 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7618ac4edd90>, 'usd', 'php', -1.0) -- Kwargs: {}
+2025-10-09 15:41:46,509 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 15:41:46,511 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:58:30,283 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:58:30,283 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7365e66b6960>, 'json') -- Kwargs: {}
+2025-10-09 15:58:30,284 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:58:30,291 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:58:30,292 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7365e651ab40>, 'json') -- Kwargs: {}
+2025-10-09 15:58:30,292 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:59:28,116 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:59:28,116 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x737ea4af2330>, 'json') -- Kwargs: {}
+2025-10-09 15:59:28,117 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:59:28,124 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 15:59:28,124 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x737ea3e1ea50>, 'json') -- Kwargs: {}
+2025-10-09 15:59:28,124 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 15:59:38,872 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x737ea3f659a0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x737ea3e1e240>, 'USD') -- Kwargs: {}
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:34 - wrapper) - End: [get_currency_rate]
+2025-10-09 15:59:38,873 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 15:59:38,874 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x737ea3e1e240>, 'PHP') -- Kwargs: {}
+2025-10-09 15:59:38,874 - [INFO] - (logger.py:34 - wrapper) - End: [get_currency_rate]
+2025-10-09 15:59:38,874 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 15:59:38,874 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:59:51,493 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:59:51,493 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 15:59:51,493 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:59:51,493 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x737ea3f659a0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 15:59:51,493 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 23, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 15:59:51,496 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 15:59:55,257 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 15:59:55,257 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 15:59:55,257 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 15:59:55,257 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x737ea3f659a0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 15:59:55,258 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 23, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 15:59:55,258 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:00:01,624 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:00:01,625 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:00:01,625 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:00:01,626 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x737ea3f659a0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:00:01,626 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 23, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:00:01,626 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:02:10,649 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:02:10,649 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7264a3122210>, 'json') -- Kwargs: {}
+2025-10-09 16:02:10,649 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:02:10,656 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:02:10,657 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7264a30126c0>, 'json') -- Kwargs: {}
+2025-10-09 16:02:10,657 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:02:24,374 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:02:24,374 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:02:24,374 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:02:24,374 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7264a43cd8e0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:02:24,374 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7264a4e3fe90>, 'USD') -- Kwargs: {}
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:34 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7264a4e3fe90>, 'PHP') -- Kwargs: {}
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:34 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:02:24,375 - [INFO] - (logger.py:34 - wrapper) - End: [convert_amount]
+2025-10-09 16:02:24,376 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:02:28,593 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:02:28,593 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:02:28,594 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:02:28,594 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7264a43cd8e0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:02:28,594 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 23, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:02:28,595 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:02:31,124 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:02:31,126 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:02:31,126 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:02:31,126 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7264a43cd8e0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:02:31,126 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 23, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:02:31,127 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:02:55,683 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:02:55,683 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x708c34982330>, 'json') -- Kwargs: {}
+2025-10-09 16:02:55,683 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:02:55,691 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:02:55,691 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x708c34526870>, 'json') -- Kwargs: {}
+2025-10-09 16:02:55,692 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:03:08,672 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:03:08,672 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:03:08,672 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:03:08,672 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x708c346c22a0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:03:08,673 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:03:08,674 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:03:34,652 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:03:34,652 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e8a00616360>, 'json') -- Kwargs: {}
+2025-10-09 16:03:34,654 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:03:34,666 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:03:34,666 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e8a00616ba0>, 'json') -- Kwargs: {}
+2025-10-09 16:03:34,669 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:03:47,340 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:03:47,341 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:03:47,342 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:03:47,342 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7e8a00616390>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:03:47,343 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:03:47,347 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:04:21,476 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:04:21,478 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usdasfaa', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:04:21,478 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:04:21,478 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7e8a00616390>, 'usdasfaa', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:04:21,478 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:04:21,480 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:04:40,936 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:04:40,936 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x79c5d7ea9e20>, 'json') -- Kwargs: {}
+2025-10-09 16:04:40,936 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:04:40,945 - [INFO] - (logger.py:27 - wrapper) - Begin: [create_instance]
+2025-10-09 16:04:40,946 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x79c5d731a450>, 'json') -- Kwargs: {}
+2025-10-09 16:04:40,946 - [INFO] - (logger.py:34 - wrapper) - End: [create_instance]
+2025-10-09 16:04:52,798 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:04:52,799 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'assfafasfas', 'target': 'asfaaf', 'amount': 2.0}
+2025-10-09 16:04:52,799 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:04:52,799 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x79c5d7eaacc0>, 'assfafasfas', 'asfaaf', 2.0) -- Kwargs: {}
+2025-10-09 16:04:52,799 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:04:52,799 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x79c5d77f21e0>, 'ASSFAFASFAS') -- Kwargs: {}
+2025-10-09 16:04:52,799 - [ERROR] - (logger.py:32 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: ASSFAFASFAS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: ASSFAFASFAS
+2025-10-09 16:04:52,802 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: ASSFAFASFAS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: ASSFAFASFAS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 36, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: ASSFAFASFAS
+2025-10-09 16:04:52,803 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:04:57,953 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:04:57,954 - [INFO] - (logger.py:28 - wrapper) - Args: () -- Kwargs: {'source': 'usds', 'target': 'asfaaf', 'amount': 2.0}
+2025-10-09 16:04:57,954 - [INFO] - (logger.py:27 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:04:57,955 - [INFO] - (logger.py:28 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x79c5d7eaacc0>, 'usds', 'asfaaf', 2.0) -- Kwargs: {}
+2025-10-09 16:04:57,955 - [INFO] - (logger.py:27 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:04:57,955 - [INFO] - (logger.py:28 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x79c5d77f21e0>, 'USDS') -- Kwargs: {}
+2025-10-09 16:04:57,955 - [ERROR] - (logger.py:32 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+2025-10-09 16:04:57,956 - [ERROR] - (logger.py:32 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 33, in wrapper
+    raise ex
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: USDS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 30, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 36, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] [Error] Invalid currency: USDS
+2025-10-09 16:04:57,957 - [INFO] - (logger.py:34 - wrapper) - End: [convert_currency]
+2025-10-09 16:08:18,593 - [INFO] - (logger.py:19 - wrapper) - Begin: [create_instance]
+2025-10-09 16:08:18,593 - [INFO] - (logger.py:20 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70ccd2cd3440>, 'json') -- Kwargs: {}
+2025-10-09 16:08:18,593 - [INFO] - (logger.py:23 - wrapper) - End: [create_instance]
+2025-10-09 16:08:18,601 - [INFO] - (logger.py:19 - wrapper) - Begin: [create_instance]
+2025-10-09 16:08:18,603 - [INFO] - (logger.py:20 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70ccd2a1e420>, 'json') -- Kwargs: {}
+2025-10-09 16:08:18,604 - [INFO] - (logger.py:23 - wrapper) - End: [create_instance]
+2025-10-09 16:08:33,011 - [INFO] - (logger.py:19 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:08:33,011 - [INFO] - (logger.py:20 - wrapper) - Args: () -- Kwargs: {'source': 'asfaasg', 'target': 'asas', 'amount': 2.0}
+2025-10-09 16:08:33,012 - [INFO] - (logger.py:19 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:08:33,013 - [INFO] - (logger.py:20 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x70ccd2ba5340>, 'asfaasg', 'asas', 2.0) -- Kwargs: {}
+2025-10-09 16:08:33,013 - [INFO] - (logger.py:19 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:08:33,013 - [INFO] - (logger.py:20 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x70ccd2b18d10>, 'ASFAASG') -- Kwargs: {}
+2025-10-09 16:08:33,013 - [ERROR] - (logger.py:26 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: ASFAASG
+2025-10-09 16:08:33,015 - [ERROR] - (logger.py:26 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] [Error] Invalid currency: ASFAASG
+2025-10-09 16:08:33,016 - [INFO] - (logger.py:23 - wrapper) - End: [convert_currency]
+2025-10-09 16:10:33,901 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:10:33,901 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7eb1dd838110>, 'json') -- Kwargs: {}
+2025-10-09 16:10:33,901 - [INFO] - (logger.py:29 - wrapper) - End: [create_instance]
+2025-10-09 16:10:33,908 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:10:33,908 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7eb1dd712180>, 'json') -- Kwargs: {}
+2025-10-09 16:10:33,909 - [INFO] - (logger.py:29 - wrapper) - End: [create_instance]
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'a', 'target': 'a', 'amount': 2.0}
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7eb1de1aba70>, 'a', 'a', 2.0) -- Kwargs: {}
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:10:53,515 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7eb1de2bc8c0>, 'A') -- Kwargs: {}
+2025-10-09 16:10:53,515 - [ERROR] - (logger.py:26 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: A
+2025-10-09 16:10:53,521 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:10:53,521 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7eb1de2bc8c0>, 'A') -- Kwargs: {}
+2025-10-09 16:10:53,521 - [ERROR] - (logger.py:26 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 19, in get_currency_rate
+    raise Exception(f"[Error] Invalid currency: {currency}")
+Exception: [Error] Invalid currency: A
+2025-10-09 16:10:53,526 - [ERROR] - (logger.py:26 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] unsupported operand type(s) for *: 'float' and 'NoneType'
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 29, in convert_amount
+    base_amount = float(amount) * source_rate
+                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 36, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] unsupported operand type(s) for *: 'float' and 'NoneType'
+2025-10-09 16:10:53,527 - [INFO] - (logger.py:29 - wrapper) - End: [convert_currency]
+2025-10-09 16:12:11,635 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:12:11,635 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76889480cfe0>, 'json') -- Kwargs: {}
+2025-10-09 16:12:11,636 - [INFO] - (logger.py:29 - wrapper) - End: [create_instance]
+2025-10-09 16:12:11,645 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:12:11,648 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76889480e990>, 'json') -- Kwargs: {}
+2025-10-09 16:12:11,648 - [INFO] - (logger.py:29 - wrapper) - End: [create_instance]
+2025-10-09 16:12:20,584 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:12:20,585 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'a', 'target': 'a', 'amount': 2.0}
+2025-10-09 16:12:20,585 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:12:20,585 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7688949525a0>, 'a', 'a', 2.0) -- Kwargs: {}
+2025-10-09 16:12:20,585 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:12:20,585 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x768894ac3350>, 'A') -- Kwargs: {}
+2025-10-09 16:12:20,585 - [ERROR] - (logger.py:26 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency.upper()}")
+ValueError: [Error] Invalid currency: A
+2025-10-09 16:12:20,599 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:12:20,599 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x768894ac3350>, 'A') -- Kwargs: {}
+2025-10-09 16:12:20,599 - [ERROR] - (logger.py:26 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency.upper()}")
+ValueError: [Error] Invalid currency: A
+2025-10-09 16:12:20,599 - [ERROR] - (logger.py:26 - wrapper) - Exception in convert_amount: [Error] Conversion failed. [Info] unsupported operand type(s) for *: 'float' and 'NoneType'
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 29, in convert_amount
+    base_amount = float(amount) * source_rate
+                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 24, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 37, in convert_amount
+    raise ValueError(f"[Error] Conversion failed. [Info] {str(e)}")
+ValueError: [Error] Conversion failed. [Info] unsupported operand type(s) for *: 'float' and 'NoneType'
+2025-10-09 16:12:20,602 - [INFO] - (logger.py:29 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:13,278 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:14:13,278 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7946b505bda0>, 'json') -- Kwargs: {}
+2025-10-09 16:14:13,278 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:14:13,284 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:14:13,284 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7946b3e0e6c0>, 'json') -- Kwargs: {}
+2025-10-09 16:14:13,284 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:14:21,576 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:21,577 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'a', 'target': 'a', 'amount': 2.0}
+2025-10-09 16:14:21,577 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:21,577 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'a', 'a', 2.0) -- Kwargs: {}
+2025-10-09 16:14:21,578 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:14:21,578 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'A') -- Kwargs: {}
+2025-10-09 16:14:21,578 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: A
+2025-10-09 16:14:21,579 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: A
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: A
+2025-10-09 16:14:21,583 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USDs', 'target': 'a', 'amount': 2.0}
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USDs', 'a', 2.0) -- Kwargs: {}
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:14:31,287 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'USDS') -- Kwargs: {}
+2025-10-09 16:14:31,287 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:14:31,288 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:14:31,288 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:37,435 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:37,435 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USDs', 'target': 'a', 'amount': -2.0}
+2025-10-09 16:14:37,435 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:37,436 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USDs', 'a', -2.0) -- Kwargs: {}
+2025-10-09 16:14:37,436 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:14:37,436 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:44,775 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:44,775 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USD', 'target': 'php', 'amount': -2.0}
+2025-10-09 16:14:44,775 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:44,775 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USD', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:14:44,775 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:14:44,776 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:49,751 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:49,751 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USD', 'target': 'PHP', 'amount': -2.0}
+2025-10-09 16:14:49,751 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:49,751 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USD', 'PHP', -2.0) -- Kwargs: {}
+2025-10-09 16:14:49,751 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:14:49,752 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:53,465 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USD', 'target': 'PHP', 'amount': 2.0}
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USD', 'PHP', 2.0) -- Kwargs: {}
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'USD') -- Kwargs: {}
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'PHP') -- Kwargs: {}
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:14:53,466 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:14:57,081 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:14:57,081 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USDs', 'target': 'PHP', 'amount': 2.0}
+2025-10-09 16:14:57,082 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:14:57,082 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USDs', 'PHP', 2.0) -- Kwargs: {}
+2025-10-09 16:14:57,083 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:14:57,084 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'USDS') -- Kwargs: {}
+2025-10-09 16:14:57,084 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:14:57,084 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:14:57,085 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:15:20,599 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:15:20,599 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'USDs', 'target': 'PHP', 'amount': 2.0}
+2025-10-09 16:15:20,599 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:15:20,599 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7946b3f525a0>, 'USDs', 'PHP', 2.0) -- Kwargs: {}
+2025-10-09 16:15:20,599 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:15:20,600 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7946b40c3350>, 'USDS') -- Kwargs: {}
+2025-10-09 16:15:20,600 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:15:20,600 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:15:20,601 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:15:34,303 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:15:34,304 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x79489660e090>, 'json') -- Kwargs: {}
+2025-10-09 16:15:34,304 - [ERROR] - (logger.py:27 - wrapper) - Exception in create_instance: [Errno 2] No such file or directory: 'rate.json'
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/dal_factory.py", line 15, in create_instance
+    return dao_class()
+           ^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 7, in __init__
+    self.fetched_currency = read_json_as_dict("rate.json")
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/file_util.py", line 4, in read_json_as_dict
+    with open(file_name) as f:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'rate.json'
+2025-10-09 16:16:43,281 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:16:43,281 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7b4e6fb99d90>, 'json') -- Kwargs: {}
+2025-10-09 16:16:43,282 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:16:43,287 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:16:43,287 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7b4e6fa128a0>, 'json') -- Kwargs: {}
+2025-10-09 16:16:43,287 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:17:00,636 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:17:00,637 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7d2c1af14f80>, 'json') -- Kwargs: {}
+2025-10-09 16:17:00,637 - [ERROR] - (logger.py:27 - wrapper) - Exception in create_instance: [Error] Data file 'rates.json' not found. [Info] Please ensure it exists.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/dal_factory.py", line 15, in create_instance
+    return dao_class()
+           ^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 7, in __init__
+    self.fetched_currency = read_json_as_dict("rates.json")
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/file_util.py", line 6, in read_json_as_dict
+    raise ValueError(f"[Error] Data file '{file_name}' not found. [Info] Please ensure it exists.")
+ValueError: [Error] Data file 'rates.json' not found. [Info] Please ensure it exists.
+2025-10-09 16:17:30,102 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:17:30,102 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e53d8815220>, 'json') -- Kwargs: {}
+2025-10-09 16:17:30,102 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:17:30,107 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:17:30,108 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e53d8816480>, 'json') -- Kwargs: {}
+2025-10-09 16:17:30,108 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:17:48,501 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:17:48,501 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x786f0d91e1b0>, 'json') -- Kwargs: {}
+2025-10-09 16:17:48,501 - [ERROR] - (logger.py:27 - wrapper) - Exception in create_instance: [Errno 2] No such file or directory: 'rates.json'
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/dal_factory.py", line 15, in create_instance
+    return dao_class()
+           ^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 7, in __init__
+    self.fetched_currency = read_json_as_dict("rates.json")
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/file_util.py", line 4, in read_json_as_dict
+    with open(file_name) as f:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'rates.json'
+2025-10-09 16:20:49,881 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:20:49,881 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7ec1f5310f50>, 'json') -- Kwargs: {}
+2025-10-09 16:20:49,881 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:20:49,881 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:20:49,881 - [ERROR] - (logger.py:27 - wrapper) - Exception in read_json_as_dict: [Error] File not found: rates.json
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/file_util.py", line 7, in read_json_as_dict
+    raise ValueError(f"[Error] File not found: {file_name}")
+ValueError: [Error] File not found: rates.json
+2025-10-09 16:20:49,883 - [ERROR] - (logger.py:27 - wrapper) - Exception in create_instance: [Error] File not found: rates.json
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/dal_factory.py", line 15, in create_instance
+    return dao_class()
+           ^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 7, in __init__
+    self.fetched_currency = read_json_as_dict("rates.json")
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/file_util.py", line 7, in read_json_as_dict
+    raise ValueError(f"[Error] File not found: {file_name}")
+ValueError: [Error] File not found: rates.json
+2025-10-09 16:22:46,385 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:22:46,385 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x725d49451be0>, 'json') -- Kwargs: {}
+2025-10-09 16:22:46,385 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:22:46,385 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:22:46,386 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:22:46,386 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:22:46,392 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:22:46,392 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x725d4930eab0>, 'json') -- Kwargs: {}
+2025-10-09 16:22:46,393 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:22:46,394 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:22:46,394 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:22:46,394 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d495c3cb0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:22:59,719 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'USD') -- Kwargs: {}
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'PHP') -- Kwargs: {}
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:22:59,720 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:23:03,152 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:23:03,153 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd2', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:23:03,153 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:23:03,153 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d495c3cb0>, 'usd2', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:23:03,153 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:03,153 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'USD2') -- Kwargs: {}
+2025-10-09 16:23:03,153 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USD2
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USD2
+2025-10-09 16:23:03,154 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USD2
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USD2
+2025-10-09 16:23:03,157 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'phpasd', 'amount': 2.0}
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d495c3cb0>, 'usd', 'phpasd', 2.0) -- Kwargs: {}
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'USD') -- Kwargs: {}
+2025-10-09 16:23:09,284 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:23:09,285 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:09,285 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'PHPASD') -- Kwargs: {}
+2025-10-09 16:23:09,285 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: PHPASD
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: PHPASD
+2025-10-09 16:23:09,285 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: PHPASD
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 28, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: PHPASD
+2025-10-09 16:23:09,286 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': '   php', 'amount': 2.0}
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d495c3cb0>, 'usd', '   php', 2.0) -- Kwargs: {}
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:14,411 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'USD') -- Kwargs: {}
+2025-10-09 16:23:14,412 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:23:14,412 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:14,412 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, '   PHP') -- Kwargs: {}
+2025-10-09 16:23:14,412 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency:    PHP
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency:    PHP
+2025-10-09 16:23:14,413 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency:    PHP
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 28, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency:    PHP
+2025-10-09 16:23:14,414 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:23:17,467 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': '   php', 'amount': 2.0}
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x725d495c3cb0>, 'usd', '   php', 2.0) -- Kwargs: {}
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, 'USD') -- Kwargs: {}
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:23:17,468 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x725d49f1e5a0>, '   PHP') -- Kwargs: {}
+2025-10-09 16:23:17,469 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency:    PHP
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency:    PHP
+2025-10-09 16:23:17,471 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency:    PHP
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 28, in convert_amount
+    target_rate = get_rate(target)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency:    PHP
+2025-10-09 16:23:17,471 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:24:49,869 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:24:49,870 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x711c51cbf1d0>, 'json') -- Kwargs: {}
+2025-10-09 16:24:49,870 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:24:49,870 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:24:49,870 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:24:49,871 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:24:49,877 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:24:49,877 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x711c51cd0b30>, 'json') -- Kwargs: {}
+2025-10-09 16:24:49,877 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:24:49,878 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:24:49,878 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:24:49,878 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:25:08,882 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:25:08,882 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'us d', 'target': 'ph p', 'amount': 2.0}
+2025-10-09 16:25:08,882 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:25:08,883 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x711c51cbf320>, 'us d', 'ph p', 2.0) -- Kwargs: {}
+2025-10-09 16:25:08,883 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:25:08,883 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c52e4b530>, 'US D') -- Kwargs: {}
+2025-10-09 16:25:08,883 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: US D
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: US D
+2025-10-09 16:25:08,884 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: US D
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: US D
+2025-10-09 16:25:08,885 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': '     usd', 'target': 'php    ', 'amount': 2.0}
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x711c51cbf320>, '     usd', 'php    ', 2.0) -- Kwargs: {}
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c52e4b530>, '     USD') -- Kwargs: {}
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c52e4b530>, 'PHP    ') -- Kwargs: {}
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:25:20,513 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:25:20,514 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:25:27,233 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:25:27,233 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php    ', 'amount': 2.0}
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x711c51cbf320>, 'usd', 'php    ', 2.0) -- Kwargs: {}
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c52e4b530>, 'USD') -- Kwargs: {}
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c52e4b530>, 'PHP    ') -- Kwargs: {}
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:25:27,234 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:25:27,235 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:25:44,083 - [INFO] - (logger.py:20 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 16:25:44,085 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 16:25:44,086 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_rates_data]
+2025-10-09 16:25:44,087 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x711c51cd0710>,) -- Kwargs: {}
+2025-10-09 16:25:44,088 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_rates]
+2025-10-09 16:25:44,089 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x711c51cd0aa0>,) -- Kwargs: {}
+2025-10-09 16:25:44,091 - [INFO] - (logger.py:24 - wrapper) - End: [get_rates]
+2025-10-09 16:25:44,091 - [INFO] - (logger.py:24 - wrapper) - End: [get_rates_data]
+2025-10-09 16:25:44,091 - [INFO] - (logger.py:24 - wrapper) - End: [retrieve_rates]
+2025-10-09 16:26:03,628 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:26:03,628 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x790ee1aec7a0>, 'json') -- Kwargs: {}
+2025-10-09 16:26:03,629 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:26:03,629 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:26:03,629 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:26:03,629 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:26:03,634 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:26:03,634 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x790ee1930d70>, 'json') -- Kwargs: {}
+2025-10-09 16:26:03,635 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:26:03,635 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:26:03,635 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:26:03,635 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:27:19,427 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:27:19,428 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'cnd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:27:19,428 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:27:19,428 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x790ee1a6a2a0>, 'cnd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:27:19,428 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:27:19,428 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x790ee24cbf80>, 'CND') -- Kwargs: {}
+2025-10-09 16:27:19,428 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: CND
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: CND
+2025-10-09 16:27:19,429 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: CND
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: CND
+2025-10-09 16:27:19,430 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:27:26,495 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:27:26,495 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usdd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:27:26,495 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:27:26,495 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x790ee1a6a2a0>, 'usdd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:27:26,497 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:27:26,497 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x790ee24cbf80>, 'USDD') -- Kwargs: {}
+2025-10-09 16:27:26,497 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDD
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDD
+2025-10-09 16:27:26,498 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USDD
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDD
+2025-10-09 16:27:26,500 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x790ee1a6a2a0>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x790ee24cbf80>, 'USD') -- Kwargs: {}
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:27:30,123 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x790ee24cbf80>, 'PHP') -- Kwargs: {}
+2025-10-09 16:27:30,124 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:27:30,124 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:27:30,124 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:32:18,178 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:32:18,178 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7a9ce4baaf60>, 'json') -- Kwargs: {}
+2025-10-09 16:32:18,178 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:32:18,179 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:32:18,179 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:32:18,179 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:32:18,187 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:32:18,187 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7a9ce4030800>, 'json') -- Kwargs: {}
+2025-10-09 16:32:18,187 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:32:18,187 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:32:18,188 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:32:18,188 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:32:40,556 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:32:40,557 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usds', 'target': 's', 'amount': 2.0}
+2025-10-09 16:32:40,557 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:32:40,557 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a9ce4166150>, 'usds', 's', 2.0) -- Kwargs: {}
+2025-10-09 16:32:40,557 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:32:40,557 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7a9ce41aec60>, 'USDS') -- Kwargs: {}
+2025-10-09 16:32:40,557 - [ERROR] - (logger.py:27 - wrapper) - Exception in get_currency_rate: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:32:40,559 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Invalid currency: USDS
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 27, in convert_amount
+    source_rate = get_rate(source)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/dal/rates_dal.py", line 18, in get_currency_rate
+    raise ValueError(f"[Error] Invalid currency: {currency}")
+ValueError: [Error] Invalid currency: USDS
+2025-10-09 16:32:40,561 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0}
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a9ce4166150>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7a9ce41aec60>, 'USD') -- Kwargs: {}
+2025-10-09 16:33:53,829 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:33:53,830 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:33:53,831 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7a9ce41aec60>, 'PHP') -- Kwargs: {}
+2025-10-09 16:33:53,832 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:33:53,833 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:33:53,833 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:34:01,395 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:34:01,395 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -1.0}
+2025-10-09 16:34:01,395 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:34:01,395 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a9ce4166150>, 'usd', 'php', -1.0) -- Kwargs: {}
+2025-10-09 16:34:01,395 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:34:01,397 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:34:21,899 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:34:21,899 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -1.0}
+2025-10-09 16:34:21,899 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:34:21,899 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7a9ce4166150>, 'usd', 'php', -1.0) -- Kwargs: {}
+2025-10-09 16:34:21,899 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:34:21,900 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:36:26,988 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:36:26,988 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x724e9e0b02c0>, 'json') -- Kwargs: {}
+2025-10-09 16:36:26,988 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:36:26,989 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:36:26,989 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:36:26,989 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:36:26,997 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:36:26,997 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x724e9d42cd70>, 'json') -- Kwargs: {}
+2025-10-09 16:36:26,998 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:36:26,998 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:36:26,998 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:36:26,998 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:36:40,223 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:36:40,224 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0, 'response': <starlette.responses.Response object at 0x724e9d465a90>}
+2025-10-09 16:36:40,224 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:36:40,224 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x724e9df9ac90>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:36:40,224 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:36:40,225 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:37:26,091 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:37:26,091 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x75f7ccec02c0>, 'json') -- Kwargs: {}
+2025-10-09 16:37:26,091 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:37:26,091 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:37:26,091 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:37:26,092 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:37:26,102 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:37:26,102 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x75f7cb1d08f0>, 'json') -- Kwargs: {}
+2025-10-09 16:37:26,102 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:37:26,103 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:37:26,103 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:37:26,103 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:38:45,660 - [INFO] - (logger.py:20 - wrapper) - Begin: [retrieve_rates]
+2025-10-09 16:38:45,660 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {}
+2025-10-09 16:38:45,661 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_rates_data]
+2025-10-09 16:38:45,661 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x75f7cb1d09e0>,) -- Kwargs: {}
+2025-10-09 16:38:45,661 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_rates]
+2025-10-09 16:38:45,661 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x75f7cb1d0a40>,) -- Kwargs: {}
+2025-10-09 16:38:45,661 - [INFO] - (logger.py:24 - wrapper) - End: [get_rates]
+2025-10-09 16:38:45,662 - [INFO] - (logger.py:24 - wrapper) - End: [get_rates_data]
+2025-10-09 16:38:45,662 - [INFO] - (logger.py:24 - wrapper) - End: [retrieve_rates]
+2025-10-09 16:38:51,806 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:38:51,807 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0, 'response': <starlette.responses.Response object at 0x75f7cb2084a0>}
+2025-10-09 16:38:51,807 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:38:51,807 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x75f7cb1bf5c0>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:38:51,808 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:38:51,809 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:42:52,439 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:42:52,440 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x795af99343e0>, 'json') -- Kwargs: {}
+2025-10-09 16:42:52,440 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:42:52,441 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:42:52,441 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:42:52,442 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:42:52,452 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:42:52,452 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x795af9934710>, 'json') -- Kwargs: {}
+2025-10-09 16:42:52,453 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:42:52,453 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:42:52,454 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:42:52,455 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:43:42,575 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:43:42,576 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7cedb3409070>, 'json') -- Kwargs: {}
+2025-10-09 16:43:42,577 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:43:42,578 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:43:42,579 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:43:42,579 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:43:42,583 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:43:42,584 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7cedb27cc710>, 'json') -- Kwargs: {}
+2025-10-09 16:43:42,584 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:43:42,584 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:43:42,588 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:43:42,588 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71d2b6c0a1e0>, 'json') -- Kwargs: {}
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:45:53,722 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:45:53,741 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:45:53,741 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71d2b6ad8b90>, 'json') -- Kwargs: {}
+2025-10-09 16:45:53,744 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:45:53,744 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:45:53,745 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:45:53,745 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7ba0deec3ce0>, 'json') -- Kwargs: {}
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:47:13,409 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:47:13,419 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 16:47:13,420 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7ba0deed4c20>, 'json') -- Kwargs: {}
+2025-10-09 16:47:13,420 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 16:47:13,420 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 16:47:13,420 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 16:47:13,420 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 16:47:30,804 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:47:30,804 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': -2.0, 'response': <starlette.responses.Response object at 0x7ba0def11940>}
+2025-10-09 16:47:30,804 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:47:30,804 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7ba0deec3320>, 'usd', 'php', -2.0) -- Kwargs: {}
+2025-10-09 16:47:30,804 - [ERROR] - (logger.py:27 - wrapper) - Exception in convert_amount: [Error] Amount must not be negative.
+Traceback (most recent call last):
+  File "/home/citco/fadriano-python/fxapp/util/logger.py", line 23, in wrapper
+    result = function_pointer(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/citco/fadriano-python/fxapp/bll/rates_bll.py", line 22, in convert_amount
+    raise ValueError("[Error] Amount must not be negative.")
+ValueError: [Error] Amount must not be negative.
+2025-10-09 16:47:30,806 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 16:49:07,456 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 16:49:07,456 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0, 'response': <starlette.responses.Response object at 0x7ba0def4fd40>}
+2025-10-09 16:49:07,456 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7ba0deec3320>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7ba0e0d26e10>, 'USD') -- Kwargs: {}
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7ba0e0d26e10>, 'PHP') -- Kwargs: {}
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 16:49:07,457 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 17:13:46,288 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_currency]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:21 - wrapper) - Args: () -- Kwargs: {'source': 'usd', 'target': 'php', 'amount': 2.0, 'response': <starlette.responses.Response object at 0x7ba0def4fce0>}
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:20 - wrapper) - Begin: [convert_amount]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:21 - wrapper) - Args: (<bll.rates_bll.RatesBll object at 0x7ba0deec3320>, 'usd', 'php', 2.0) -- Kwargs: {}
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7ba0e0d26e10>, 'USD') -- Kwargs: {}
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:20 - wrapper) - Begin: [get_currency_rate]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.rates_dal.RateDao object at 0x7ba0e0d26e10>, 'PHP') -- Kwargs: {}
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:24 - wrapper) - End: [get_currency_rate]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:24 - wrapper) - End: [convert_amount]
+2025-10-09 17:13:46,289 - [INFO] - (logger.py:24 - wrapper) - End: [convert_currency]
+2025-10-09 18:19:19,002 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:19:19,003 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7b9436fe82c0>, 'json') -- Kwargs: {}
+2025-10-09 18:19:19,003 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:19:19,004 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:19:19,004 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:19:19,005 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:19:19,013 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:19:19,013 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7b9436ed4c20>, 'json') -- Kwargs: {}
+2025-10-09 18:19:19,013 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:19:19,013 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:19:19,014 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:19:19,014 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:19:45,587 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:19:45,588 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e0eee4303b0>, 'json') -- Kwargs: {}
+2025-10-09 18:19:45,588 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:19:45,588 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:19:45,588 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:19:45,588 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:19:45,594 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:19:45,594 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7e0eee4307a0>, 'json') -- Kwargs: {}
+2025-10-09 18:19:45,595 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:19:45,595 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:19:45,595 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:19:45,595 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x78f9cab40320>, 'json') -- Kwargs: {}
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:22:41,174 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:22:41,179 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:22:41,180 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x78f9c9f34560>, 'json') -- Kwargs: {}
+2025-10-09 18:22:41,180 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:22:41,180 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:22:41,181 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:22:41,181 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76af0daf4c50>, 'json') -- Kwargs: {}
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:27:19,313 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:27:19,318 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:27:19,318 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x76af0cf34770>, 'json') -- Kwargs: {}
+2025-10-09 18:27:19,319 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:27:19,319 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:27:19,319 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:27:19,319 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:27:24,948 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:27:24,949 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71789f123ce0>, 'json') -- Kwargs: {}
+2025-10-09 18:27:24,949 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:27:24,949 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:27:24,949 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:27:24,949 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:27:24,955 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:27:24,955 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x71789f134e00>, 'json') -- Kwargs: {}
+2025-10-09 18:27:24,955 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:27:24,955 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:27:24,955 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:27:24,956 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:06,553 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:06,554 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x77429d9236b0>, 'json') -- Kwargs: {}
+2025-10-09 18:28:06,554 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:06,554 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:06,554 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:06,554 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:06,559 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:06,559 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x77429d934a40>, 'json') -- Kwargs: {}
+2025-10-09 18:28:06,559 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:06,560 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:06,560 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:06,560 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:11,321 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:11,321 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7255395bf170>, 'json') -- Kwargs: {}
+2025-10-09 18:28:11,321 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:11,322 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:11,322 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:11,322 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:11,327 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:11,327 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7255395d0950>, 'json') -- Kwargs: {}
+2025-10-09 18:28:11,327 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:11,327 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:11,328 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:11,328 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:34,500 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:34,501 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7bdead006150>, 'json') -- Kwargs: {}
+2025-10-09 18:28:34,502 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:34,503 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:34,503 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:34,503 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:34,510 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:34,510 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7bdeaced0890>, 'json') -- Kwargs: {}
+2025-10-09 18:28:34,510 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:34,511 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:34,512 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:34,512 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:38,284 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:38,285 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70fae9730530>, 'json') -- Kwargs: {}
+2025-10-09 18:28:38,285 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:38,285 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:38,286 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:38,286 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:38,292 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:38,292 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70fae9730ad0>, 'json') -- Kwargs: {}
+2025-10-09 18:28:38,293 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:38,293 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:38,293 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:38,294 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:52,295 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:52,295 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70be1c2aedb0>, 'json') -- Kwargs: {}
+2025-10-09 18:28:52,295 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:52,295 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:52,296 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:52,296 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x70be1b7349b0>, 'json') -- Kwargs: {}
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:52,301 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:59,966 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:59,967 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x73ed5c92c770>, 'json') -- Kwargs: {}
+2025-10-09 18:28:59,967 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:59,967 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:59,968 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:59,968 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:28:59,974 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:28:59,975 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x73ed5c92ce60>, 'json') -- Kwargs: {}
+2025-10-09 18:28:59,975 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:28:59,975 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:28:59,976 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:28:59,976 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:29:06,063 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:29:06,063 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7bbca30bf170>, 'json') -- Kwargs: {}
+2025-10-09 18:29:06,063 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:29:06,063 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:29:06,064 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:29:06,064 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:29:06,069 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:29:06,069 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x7bbca30d0620>, 'json') -- Kwargs: {}
+2025-10-09 18:29:06,069 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:29:06,069 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:29:06,070 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:29:06,070 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:29:43,742 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:29:43,743 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x763d237bb410>, 'json') -- Kwargs: {}
+2025-10-09 18:29:43,743 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:29:43,743 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:29:43,743 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:29:43,744 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]
+2025-10-09 18:29:43,750 - [INFO] - (logger.py:20 - wrapper) - Begin: [create_instance]
+2025-10-09 18:29:43,750 - [INFO] - (logger.py:21 - wrapper) - Args: (<dal.dal_factory.RatesFactory object at 0x763d237cc650>, 'json') -- Kwargs: {}
+2025-10-09 18:29:43,750 - [INFO] - (logger.py:20 - wrapper) - Begin: [read_json_as_dict]
+2025-10-09 18:29:43,750 - [INFO] - (logger.py:21 - wrapper) - Args: ('rates.json',) -- Kwargs: {}
+2025-10-09 18:29:43,751 - [INFO] - (logger.py:24 - wrapper) - End: [read_json_as_dict]
+2025-10-09 18:29:43,751 - [INFO] - (logger.py:24 - wrapper) - End: [create_instance]

@@ -1,5 +1,6 @@
 from abc import ABC
 
+
 class RateABC(ABC):
     def get_rates(self) -> dict:
         pass
